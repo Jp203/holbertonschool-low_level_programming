@@ -1,10 +1,12 @@
+/*
+ * Simple program to print text 
+*/
+
 #include <stdio.h>
-#include <string.h>
 
 /**
- * Print ---"programming is like
- * building a multilingual puzzle"
- * Return=0
+ * main-prints using (puts)
+ * return=0
  */
 
 int main (void)
