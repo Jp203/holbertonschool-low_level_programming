@@ -5,12 +5,12 @@
 #include <stdio.h>
 
 /**
- *main
+ *main - Prints "With proper grammar..."
  *return=0
  */
 
 int main()
 {
 	printf("%s", "with proper grammar,but the outcome is a pieceof art,\n");
-	return 0;
+	return (0);
 }
