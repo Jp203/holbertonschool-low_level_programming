@@ -5,8 +5,8 @@
 #include <stdio.h>
 
 /**
- *main - Prints "With proper grammar..." to stdout
- *Return: 0
+ * main - Prints "With proper grammar..." to stdout
+ * Return: 0
  */
 
 int main(void)
