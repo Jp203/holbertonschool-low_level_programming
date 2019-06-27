@@ -1,16 +1,25 @@
-#include 
+#include "holberton.h"
+
+/**
+  *
+  * main - main function
+  *
+  * Return: 0
+  *
+  */
 
 int main(void)
 {
-	char string [] = "Holberton\n";
-	int i = 0;
+	/* Sets & makes pointer to Holberton in read-only memory */
+	char *j = "Holberton\n";
+	int p = 0;
 
-	while(string[i] != '0')
+	j = "Holberton\n";
+
+	for (p = 0; p <= 9; p++)
 	{
-		putchar(string[i]);
-		i++;
+		_putchar(j[p]);
 	}
-	getchar();
 	return(0);
 }
 
