@@ -14,7 +14,7 @@ void print_alphabet_x10(void)
 
 	for (j = 1; j <= 10; j++)
 	{
-		n = "abcdefghijklmnopqrstuvwxyz"
+		n = "abcdefghijklmnopqrstuvwxyz\n";
 
 		for ( o = 0; o <= 26; o++)
 		{
