@@ -7,15 +7,17 @@
  * Return: Always 0.
  */
 
-void print_number(void)
+void print_numbers(void)
 {
 
-	char j;
+	int j;
 	
 	/* Printing numbers starting at 0 up to 9 */
-	for (j = '0'; j <= '9'; i++)
+	for (j = 0; j <= 9 ; j++)
 	{
-		_putchar(j);
+		/* Using ASCII to increment up from 0 */
+		_putchar(j + 48);
 	}
 	_putchar('\n');
+	return (0);
 }
