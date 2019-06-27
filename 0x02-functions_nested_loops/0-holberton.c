@@ -11,8 +11,8 @@
 int main(void)
 {
 	/* Sets & makes pointer to Holberton in read-only memory */
-	char *j = "Holberton\n";
-	int p = 0;
+	char *j;
+	int p;
 
 	j = "Holberton\n";
 
