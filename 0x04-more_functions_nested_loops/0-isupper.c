@@ -1,7 +1,7 @@
 #include "holberton.h"
+#include <stdio.h>
 
 /**
- *
  * _isupper - Checks for uppercase character.
  *
  * @c: int to be checked.
@@ -13,9 +13,10 @@
 int _isupper(int c)
 {
 	int stat;
+
 	stat = 0;
 
-	if ( c >= 65 && c < 91)
+	if (c >= 65 && c < 91)
 	{
 		stat = 1;
 	}
