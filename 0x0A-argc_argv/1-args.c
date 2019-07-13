@@ -8,9 +8,9 @@
   *
   * Return: 0 when successful.
   */
-int main(int argc, char *argv)
+int main(int argc, char __attribute__((unused)) *argv[])
 {
-	while(argc--)
-		printf("%s\n", *argv++);
+	/* Print value of argc */
+	printf("%d\n", argc - 1);
 	return (0);
 }
