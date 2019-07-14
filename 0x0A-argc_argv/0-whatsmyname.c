@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include <stdio.h>
 /**
   * main - Program will print its own name.
   *
