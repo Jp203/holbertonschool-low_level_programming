@@ -1,4 +1,3 @@
-#include "holberton.h"
 #include <stdio.h>
 /**
   * main - Print the number of arguments passed into program.
@@ -11,6 +10,6 @@
 int main(int argc, char __attribute__((unused)) *argv[])
 {
 	/* Print value of argc */
-	printf("%d\n", argc - 1);
+	printf("%i\n", argc - 1);
 	return (0);
 }
