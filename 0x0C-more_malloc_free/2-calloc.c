@@ -10,7 +10,7 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	unsigned int count;
-	int *ptr;
+	char *ptr;
 
 	/* Validity Check */
 	if (nmemb == 0 || size == 0)
