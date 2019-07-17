@@ -21,8 +21,8 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	if (ptr == NULL)
 		return (NULL);
 	/* Set count to @nmemb value*/
-	for (count = 0; count < nmemb; count++)
-		/* Set memory to zero */
+	for (count = 0; count < (nmemb * size); count++)
+		/* Set memory of each element i arrray to zero */
 		ptr[count] = 0;
 	return (ptr);
 }
