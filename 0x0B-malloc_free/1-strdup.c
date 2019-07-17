@@ -18,7 +18,6 @@ char *_strdup(char *str)
 	/* Increment length until end of string */
 	for (length = 0; str[length] != '\0'; length++)
 		;
-	/* Add 1 for null byte */
 	length++;
 	/* Check 2 */
 	if (length < 1)
@@ -31,10 +30,10 @@ char *_strdup(char *str)
 		free(ptr);
 		return (NULL);
 	}
-	/* Iterate through length to set ptr to str length */
+	/* Set str length to ptr */
 	for (i = 0; i < length; i++)
 		ptr[i] = str[i];
-	/* Set last vector of array as null byte */
+	/* NULL byte terminator */
 	ptr[i] = '\0';
 	return (ptr);
 }
