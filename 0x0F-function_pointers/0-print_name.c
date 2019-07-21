@@ -1,4 +1,6 @@
 #include "function_pointers.h"
+#include <stdlib.h>
+#include <stdio.h>
 /**
   * print_name - prints given name
   * @name: input of the name of person.
@@ -7,5 +9,8 @@
   */
 void print_name(char *name, void (*f)(char *))
 {
-	(*f)(name);
+	if (f)
+	{
+		(*f)(name);
+	}
 }
