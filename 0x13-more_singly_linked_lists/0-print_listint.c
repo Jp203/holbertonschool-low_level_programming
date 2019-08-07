@@ -10,12 +10,8 @@ size_t print_listint(const listint_t *h)
 	/* NULL check */
 	if (h == NULL)
 		return (0);
-	/* traverse thru n & print all elements */
-	while (h != NULL)
-	{
-		printf("%d\n", h->n);
-		break;
-	}
+	/* print elements */
+	printf("%d\n", h->n);
 	/* return # of nodes in the list */
 	return (1 + print_listint(h->next));
 }
