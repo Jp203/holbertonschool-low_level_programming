@@ -1,32 +1,38 @@
 #include "holberton.h"
+
 /**
-  * cap_string - Capitolize all words of a given string.
-  *
-  * @s: A pointer to the string that will be converted.
-  *
-  * Return: Pointer of capitalized string.
-  */
-char *cap_string(char *s)
+ * cap_string - Capitalizes all words of a string.
+ * @str: The string to be capitalized.
+ *
+ * Return: A pointer to the changed string.
+ */
+char *cap_string(char *str)
 {
-	int j, p;
+	int index = 0;
 
-	char sep[] = " \t\n,;.!?\"(){}";
-
-	j = 1;
-
-	if (s[0] >= 'a' && s[0] <= 'z')
+	while (str[index])
 	{
-		s[0] -= ('a' - 'A');
+		while (!(str[index] >= 'a' && str[index] <= 'z'))
+			index++;
+
+		if (str[index - 1] == ' ' ||
+		    str[index - 1] == '\t' ||
+		    str[index - 1] == '\n' ||
+		    str[index - 1] == ',' ||
+		    str[index - 1] == ';' ||
+		    str[index - 1] == '.' ||
+		    str[index - 1] == '!' ||
+		    str[index - 1] == '?' ||
+		    str[index - 1] == '"' ||
+		    str[index - 1] == '(' ||
+		    str[index - 1] == ')' ||
+		    str[index - 1] == '{' ||
+		    str[index - 1] == '}' ||
+		    index == 0)
+			str[index] -= 32;
+
+		index++;
 	}
 
-	while (s[j] != '\0')
-	{
-		for (p = 0; sep[p] != '\0'; p++)
-			if (s[j - 1] == sep[p] && (s[j] >= 'a' && s[j] <= 'z'))
-			{
-				s[j] -= ('a' - 'A');
-				j++;
-			}
-	}
-		return (s);
+	return (str);
 }
