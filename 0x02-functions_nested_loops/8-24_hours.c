@@ -1,7 +1,6 @@
 #include "holberton.h"
 
 /**
-  *
   * jack_bauer - print time of day
   * Return: end time
   *
