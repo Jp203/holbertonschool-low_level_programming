@@ -11,7 +11,7 @@ int main(void)
 
 	total = 1;
 	sum = 0;
-	if (total < 1024)
+	while (total < 1024)
 	{
 		mul3 = total % 3;
 		mul5 = total % 5;
