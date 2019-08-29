@@ -19,7 +19,7 @@ void jack_bauer(void)
 		h1 = ((hrs / 10) % 10) + '0';
 		h2 = (hrs % 10) + '0';
 		m1 = ((mins / 10) % 10) + '0';
-		mi2 = (mins % 10) + '0';
+		m2 = (mins % 10) + '0';
 		_putchar(h1);
 		_putchar(h2);
 		_putchar(':');
