@@ -2,7 +2,7 @@
 
 /**
   *
-  * jack_bauer - print time of day 
+  * jack_bauer - print time of day
   * Return: end time
   *
   */
