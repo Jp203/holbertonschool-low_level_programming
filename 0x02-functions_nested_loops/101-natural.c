@@ -13,11 +13,11 @@ int main(void)
 	sum = 0;
 	if (total < 1024)
 	{
-		mul3 = value % 3;
-		mul5 = value % 5;
+		mul3 = total % 3;
+		mul5 = total % 5;
 		if (mul3 == 0 || mul5 == 0)
 			sum += total;
-		value++;
+		total++;
 	}
 	printf("%d\n", sum);
 	return (0);
