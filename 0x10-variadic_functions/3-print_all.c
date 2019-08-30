@@ -1,49 +1,47 @@
-#include "variadic_functions.h"
+#include <stdio.h>
+#include <stdarg.h>
 /**
- * print_all - print anything passed
- * @format: types argument passed
- * Return: void
+ * print_all - print anything
+ * @format: for the output
  */
 void print_all(const char * const format, ...)
 {
-	va_list valist;
-	char *hold;
-	int count = 0, types;
+	int count = 0, format_ok;
+	char *text;
+	va_list va;
 
-	while (format && format[count])
+	va_start(va, format);
+	while (format && format[count] != '\0')
 	{
-		va_start(valist, format);
-		while (format[count])
+		format_ok = 1;
+		switch (format[count])
 		{
-			types = 1;
-			switch (format[count++])
-			{
 			case 'c':
-				printf("%c", va_arg(valist, int));
+				printf("%c", va_arg(va, int));
 				break;
 			case 'i':
-				printf("%d", va_arg(valist, int));
+				printf("%i", va_arg(va, int));
 				break;
 			case 'f':
-				printf("%f", va_arg(valist, double));
+				printf("%f", va_arg(va, double));
 				break;
 			case 's':
-				temp_s = va_arg(valist, char*);
-				if (hold)
+				text = va_arg(va, char *);
+				if (text)
 				{
-					printf("%s", hold);
+					printf("%s", text);
 					break;
 				}
 				printf("(nil)");
 				break;
 			default:
-				types = 0;
+				format_ok = 0;
 				break;
-			}
-			if (format[count] && types)
-				printf(", ");
 		}
-		va_end(valist);
+		if (format[count + 1] != '\0' && format_ok == 1)
+			printf(", ");
+		count++;
 	}
 	printf("\n");
+	va_end(va);
 }
