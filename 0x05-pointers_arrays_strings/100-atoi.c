@@ -1,3 +1,4 @@
+#include "holberton.h"
 /**
   * _atoi - convert a string to an integer
   * @s: string to convert
@@ -20,5 +21,5 @@ int _atoi(char *s)
 	{
 		result = result * 10 + (*s - '0');
 	}
-	return (value * line);
+	return (result * line);
 }
