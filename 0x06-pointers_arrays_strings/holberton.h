@@ -45,5 +45,5 @@ void times_table(void);
 int add(int a, int b);
 void print_to_98(int n);
 int _isupper(int c);
-
+char *infinite_add(char *n1, char *n2, char *r, int size_r);
 #endif
