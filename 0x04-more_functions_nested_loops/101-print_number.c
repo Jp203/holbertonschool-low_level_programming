@@ -1,33 +1,50 @@
 #include "holberton.h"
-/**
- * print_number - print a number
- * @n: given number
- */
 
+/**
+  * print_number - print an integer
+  * @n: number to be printed
+  * Return: void
+  */
 void print_number(int n)
 {
-	long count, length = 1, hold, store, x;
+	int num, start;
+	unsigned int num1, store;
 
-	hold = n;
-	x = length;
-
-	if (hold < 0)
+	if (n < 0)
 	{
-		hold *= -1;
 		_putchar('-');
+		n *= -1;
 	}
-	store = hold;
-	while (store >= 10)
+	num = 0;
+	store = n;
+	num1 = store;
+	do {
+		num++;
+		num1 /= 10;
+	} while (num1 > 0);
+	start = 1;
+	for (; num > 0; num--)
 	{
-		length++;
-		hold /= 10;
+		if (start)
+			_putchar(store / power(num) + '0');
+		else
+			_putchar((store / power(num)) % 10 + '0');
+		start = 0;
 	}
-	for (count = 1; count < len; count++)
-		x *= 10;
-	while (x > 1)
+}
+
+/**
+  * power - gets multiples of 10
+  * @n: multiply by this
+  * Return: total
+  */
+int power(int n)
+{
+	int total = 1;
+
+	while (--n > 0)
 	{
-		_putchar((hold / x % 10 + '0');
-		x /= 10;
+		total *= 10;
 	}
-	_putchar(res % 10 + '0');
+	return (total);
 }
