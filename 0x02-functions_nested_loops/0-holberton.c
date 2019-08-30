@@ -1,7 +1,6 @@
 #include "holberton.h"
 
 /**
-  *
   * main - main function
   *
   * Return: 0
@@ -20,7 +19,5 @@ int main(void)
 	{
 		_putchar(j[p]);
 	}
-	return(0);
+	return (0);
 }
-
-
