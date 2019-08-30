@@ -23,8 +23,8 @@ int main(void)
 	while (count <= 98)
 	{
 		hold = (h1 + h2) / 1000;
-		h3 = (h1 + h2) - carry * 1000;
-		num3 = (num1 + num2) + carry;
+		h3 = (h1 + h2) - hold * 1000;
+		num3 = (num1 + num2) + hold;
 		h1 = h2;
 		h2 = h3;
 		num1 = num2;
