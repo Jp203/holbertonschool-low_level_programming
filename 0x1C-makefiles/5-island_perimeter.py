@@ -6,13 +6,13 @@ calculate the perimeter of an island
 
 def island_perimeter(grid):
     """calculates the perimeter of an island"""
-   
+
     row = 0
     cell = 0
     boundary = [4, 3, 2, 1, 0]
     final_perimeter = 0
     count = 0
- 
+
     for row in range(1, len(grid) - 1):
         cell = 0
         while cell < len(grid[row]):
