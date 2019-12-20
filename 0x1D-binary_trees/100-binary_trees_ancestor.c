@@ -15,11 +15,11 @@ binary_tree_t *binary_trees_ancestor(const binary_tree_t *first, const binary_tr
     while (first)
     {
         second_t = (binary_tree_t *)second;
-        while (second_t1)
+        while (second_t)
         {
             if (second_t->n == first->n)
-                return (second_t1);
-            second_t1 = second_t1->parent;
+                return (second_t);
+            second_t = second_t->parent;
         }
         first = first->parent;
     }
