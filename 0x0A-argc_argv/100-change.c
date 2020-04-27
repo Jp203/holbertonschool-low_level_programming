@@ -20,7 +20,6 @@ int main(int argc, char *argv[])
 		/* Check for negative number */
 		if (argv[1][0] == '-')
 			printf("0\n");
-
 		/* Determines the least amount of coins needed */
 
 		amount = atoi(argv[1]);

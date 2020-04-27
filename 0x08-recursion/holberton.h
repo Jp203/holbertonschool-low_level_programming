@@ -16,4 +16,6 @@ int _putchar(char c);
 int help(char *s1, char *s2);
 int joker(char *s1, char *s2);
 int wildcmp(char *s1, char *s2);
+int string_length(char *s);
+int checker(char *s, int o_set, int size);
 #endif
